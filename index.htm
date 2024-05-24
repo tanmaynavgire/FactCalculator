@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .text {
+        color: rgb(233, 9, 9);
+        font-weight: bolder;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-style: italic;
+      }
+      input {
+        border-radius: 2px;
+        height: 22px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Hi There</h1>
+    <h2>Welcome to Pranjal's Factorial Calculator</h2>
+    <input type="int" placeholder="Enter a number:" />
+    <button style="padding: 5px; background-color: black; color: white">
+      Result
+    </button>
+
+    <script>
+      let btn=document.querySelector("button")
+btn.onclick=()=>{
+
+    let n=document.querySelector("input").value
+    arr=[]
+    for (let i = 1; i <=n; i++) {
+        arr[i-1]=i
+      
+    }
+    sum =arr.reduce((pre,curr)=>{
+        return pre+curr
+    
+    })
+    mul =arr.reduce((pre,curr)=>{
+        return pre*curr
+    
+    })
+   fact=document.createElement("span")
+   fact.innerText=` Factorial of first ${n} numbers is ${mul} `
+   fact.setAttribute("class", "text")
+   document.body.append(fact)
+   
+
+   
+
+}
+
+    </script>
+  </body>
+</html>
